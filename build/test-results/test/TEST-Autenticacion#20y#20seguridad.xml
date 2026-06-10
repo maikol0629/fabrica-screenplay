@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Autenticacion y seguridad" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-06-10T19:16:48" hostname="FENIX" time="6.12">
+  <properties/>
+  <testcase name="Inicio de sesion con credenciales validas" classname="Autenticacion y seguridad" time="5.603"/>
+  <testcase name="Inicio de sesion con credenciales explicitas" classname="Autenticacion y seguridad" time="0.316"/>
+  <testcase name="Inicio de sesion con credenciales invalidas" classname="Autenticacion y seguridad" time="0.112"/>
+  <testcase name="Inicio de sesion con body vacio" classname="Autenticacion y seguridad" time="0.089"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:52 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDEyLCJleHAiOjE3ODEyMDU0MTJ9.1ZIWkUM0mpPt7_R9PEwSvZVmOBftRxPmxY8WZwXK6Gs0tKKUBeYvXgC9Sxa9xizSm1MODFZRAbZhC-gFy0-4fg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE0LCJleHAiOjE3ODEyMDU0MTR9.IKNWIEt9VVIxjjQxoFdK3E9ZfQnrtm2yqTDCAum6SFppYQzH10cEeTfNYUFDIX8MAdAJgkqaMvif5WIVhWdP0w",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "invalido@test.com",
+    "contraseña": "wrongpass"
+}
+HTTP/1.1 401 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Error: Credenciales inválidas",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    
+}
+HTTP/1.1 401 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Error: Credenciales inválidas",
+    "data": null
+}
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Inicio de sesion con credenciales validas(autenticacion-y-seguridad;inicio-de-sesion-con-credenciales-validas)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Inicio de sesion con credenciales validas
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Inicio de sesion con credenciales explicitas(autenticacion-y-seguridad;inicio-de-sesion-con-credenciales-explicitas)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Inicio de sesion con credenciales explicitas
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Inicio de sesion con credenciales invalidas(autenticacion-y-seguridad;inicio-de-sesion-con-credenciales-invalidas)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Inicio de sesion con credenciales invalidas
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Inicio de sesion con body vacio(autenticacion-y-seguridad;inicio-de-sesion-con-body-vacio)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Inicio de sesion con body vacio
+----------------------------------------------------------------------
+]]></system-err>
+</testsuite>

@@ -1,0 +1,2451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Gestion de Servicios</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Gestion de Servicios</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Gestion de Servicios</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">10</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">5.062s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Actualizar servicio inexistente</td>
+<td class="success">0.306s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Actualizar un servicio existente</td>
+<td class="success">0.616s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar listado de servicios</td>
+<td class="success">0.551s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar servicio inexistente</td>
+<td class="success">0.481s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar servicio por ID</td>
+<td class="success">0.540s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Crear servicio con body vacio</td>
+<td class="success">0.466s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Crear un servicio exitosamente</td>
+<td class="success">0.540s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Eliminar servicio inexistente</td>
+<td class="success">0.334s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Eliminar un servicio existente</td>
+<td class="success">0.627s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Validar estructura de un servicio</td>
+<td class="success">0.601s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+    &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+    &quot;costo&quot;: 25000.0,
+    &quot;duracion&quot;: 30
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio creado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 148,
+        &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+        &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+        &quot;duracion&quot;: 30,
+        &quot;costo&quot;: 25000.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicios obtenidos&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;idServicio&quot;: 1,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116136031&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116136031&quot;,
+            &quot;duracion&quot;: 81,
+            &quot;costo&quot;: 46031.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 2,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116137718&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116137718&quot;,
+            &quot;duracion&quot;: 88,
+            &quot;costo&quot;: 47718.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 3,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116138600&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116138600&quot;,
+            &quot;duracion&quot;: 70,
+            &quot;costo&quot;: 48600.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 4,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116139393&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116139393&quot;,
+            &quot;duracion&quot;: 83,
+            &quot;costo&quot;: 49393.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 5,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116140151&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116140151&quot;,
+            &quot;duracion&quot;: 61,
+            &quot;costo&quot;: 50151.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 6,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116140905&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116140905&quot;,
+            &quot;duracion&quot;: 35,
+            &quot;costo&quot;: 50905.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 7,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116141595&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116141595&quot;,
+            &quot;duracion&quot;: 65,
+            &quot;costo&quot;: 51595.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 8,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116142272&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116142272&quot;,
+            &quot;duracion&quot;: 82,
+            &quot;costo&quot;: 52272.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 9,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116143154&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116143154&quot;,
+            &quot;duracion&quot;: 64,
+            &quot;costo&quot;: 53154.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 10,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116143841&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116143841&quot;,
+            &quot;duracion&quot;: 31,
+            &quot;costo&quot;: 53841.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 11,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116144541&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116144541&quot;,
+            &quot;duracion&quot;: 71,
+            &quot;costo&quot;: 54541.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 12,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116145252&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116145252&quot;,
+            &quot;duracion&quot;: 62,
+            &quot;costo&quot;: 55252.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 13,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116146098&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116146098&quot;,
+            &quot;duracion&quot;: 68,
+            &quot;costo&quot;: 56098.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 14,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116146880&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116146880&quot;,
+            &quot;duracion&quot;: 70,
+            &quot;costo&quot;: 56880.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 15,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116147605&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116147605&quot;,
+            &quot;duracion&quot;: 75,
+            &quot;costo&quot;: 57605.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 16,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 17,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116151750&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116151750&quot;,
+            &quot;duracion&quot;: 80,
+            &quot;costo&quot;: 11750.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 18,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781116152168&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781116152168&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 20,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116152969&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116152969&quot;,
+            &quot;duracion&quot;: 39,
+            &quot;costo&quot;: 12969.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 22,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116561864&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116561864&quot;,
+            &quot;duracion&quot;: 34,
+            &quot;costo&quot;: 21864.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 23,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116563684&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116563684&quot;,
+            &quot;duracion&quot;: 54,
+            &quot;costo&quot;: 23684.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 24,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116564475&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116564475&quot;,
+            &quot;duracion&quot;: 65,
+            &quot;costo&quot;: 24475.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 25,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116565255&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116565255&quot;,
+            &quot;duracion&quot;: 65,
+            &quot;costo&quot;: 25255.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 26,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116565947&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116565947&quot;,
+            &quot;duracion&quot;: 37,
+            &quot;costo&quot;: 25947.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 27,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116566631&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116566631&quot;,
+            &quot;duracion&quot;: 61,
+            &quot;costo&quot;: 26631.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 28,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116567302&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116567302&quot;,
+            &quot;duracion&quot;: 72,
+            &quot;costo&quot;: 27302.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 29,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116567956&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116567956&quot;,
+            &quot;duracion&quot;: 66,
+            &quot;costo&quot;: 27956.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 30,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116569172&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116569172&quot;,
+            &quot;duracion&quot;: 82,
+            &quot;costo&quot;: 29172.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 31,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116570207&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116570207&quot;,
+            &quot;duracion&quot;: 37,
+            &quot;costo&quot;: 30207.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 32,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116570852&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116570852&quot;,
+            &quot;duracion&quot;: 82,
+            &quot;costo&quot;: 30852.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 33,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116571525&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116571525&quot;,
+            &quot;duracion&quot;: 35,
+            &quot;costo&quot;: 31525.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 34,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116572138&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116572138&quot;,
+            &quot;duracion&quot;: 48,
+            &quot;costo&quot;: 32138.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 35,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116572756&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116572756&quot;,
+            &quot;duracion&quot;: 66,
+            &quot;costo&quot;: 32756.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 36,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116573418&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116573418&quot;,
+            &quot;duracion&quot;: 68,
+            &quot;costo&quot;: 33418.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 37,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 38,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116577230&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116577230&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 37230.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 39,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781116577653&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781116577653&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 41,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116578291&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116578291&quot;,
+            &quot;duracion&quot;: 81,
+            &quot;costo&quot;: 38291.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 43,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116781645&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116781645&quot;,
+            &quot;duracion&quot;: 35,
+            &quot;costo&quot;: 41645.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 44,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116784658&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116784658&quot;,
+            &quot;duracion&quot;: 48,
+            &quot;costo&quot;: 44658.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 45,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116785514&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116785514&quot;,
+            &quot;duracion&quot;: 64,
+            &quot;costo&quot;: 45514.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 46,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116786379&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116786379&quot;,
+            &quot;duracion&quot;: 89,
+            &quot;costo&quot;: 46379.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 47,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116787162&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116787162&quot;,
+            &quot;duracion&quot;: 32,
+            &quot;costo&quot;: 47162.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 48,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116787879&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116787879&quot;,
+            &quot;duracion&quot;: 89,
+            &quot;costo&quot;: 47879.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 49,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116788746&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116788746&quot;,
+            &quot;duracion&quot;: 56,
+            &quot;costo&quot;: 48746.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 50,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116789504&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116789504&quot;,
+            &quot;duracion&quot;: 34,
+            &quot;costo&quot;: 49504.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 51,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116791356&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116791356&quot;,
+            &quot;duracion&quot;: 86,
+            &quot;costo&quot;: 51356.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 52,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116792125&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116792125&quot;,
+            &quot;duracion&quot;: 75,
+            &quot;costo&quot;: 52125.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 53,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116792915&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116792915&quot;,
+            &quot;duracion&quot;: 85,
+            &quot;costo&quot;: 52915.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 54,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116794228&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116794228&quot;,
+            &quot;duracion&quot;: 78,
+            &quot;costo&quot;: 54228.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 55,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116795078&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116795078&quot;,
+            &quot;duracion&quot;: 88,
+            &quot;costo&quot;: 55078.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 56,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116795822&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116795822&quot;,
+            &quot;duracion&quot;: 52,
+            &quot;costo&quot;: 55822.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 57,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116796565&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116796565&quot;,
+            &quot;duracion&quot;: 75,
+            &quot;costo&quot;: 56565.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 58,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 59,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116801750&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116801750&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 11750.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 60,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781116802251&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781116802251&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 62,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116803232&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116803232&quot;,
+            &quot;duracion&quot;: 82,
+            &quot;costo&quot;: 13232.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 64,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116866786&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116866786&quot;,
+            &quot;duracion&quot;: 36,
+            &quot;costo&quot;: 26786.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 65,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116868310&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116868310&quot;,
+            &quot;duracion&quot;: 60,
+            &quot;costo&quot;: 28310.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 66,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116869332&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116869332&quot;,
+            &quot;duracion&quot;: 62,
+            &quot;costo&quot;: 29332.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 67,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116870450&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116870450&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30450.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 68,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116871448&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116871448&quot;,
+            &quot;duracion&quot;: 78,
+            &quot;costo&quot;: 31448.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 69,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116872449&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116872449&quot;,
+            &quot;duracion&quot;: 59,
+            &quot;costo&quot;: 32449.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 70,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116873389&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116873389&quot;,
+            &quot;duracion&quot;: 39,
+            &quot;costo&quot;: 33389.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 71,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116874151&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116874151&quot;,
+            &quot;duracion&quot;: 81,
+            &quot;costo&quot;: 34151.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 72,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116875274&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116875274&quot;,
+            &quot;duracion&quot;: 64,
+            &quot;costo&quot;: 35274.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 73,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116876455&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116876455&quot;,
+            &quot;duracion&quot;: 45,
+            &quot;costo&quot;: 36455.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 74,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116877443&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116877443&quot;,
+            &quot;duracion&quot;: 73,
+            &quot;costo&quot;: 37443.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 75,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116878308&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116878308&quot;,
+            &quot;duracion&quot;: 38,
+            &quot;costo&quot;: 38308.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 76,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116879213&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116879213&quot;,
+            &quot;duracion&quot;: 43,
+            &quot;costo&quot;: 39213.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 77,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116880239&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116880239&quot;,
+            &quot;duracion&quot;: 49,
+            &quot;costo&quot;: 40239.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 78,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116880956&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116880956&quot;,
+            &quot;duracion&quot;: 46,
+            &quot;costo&quot;: 40956.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 79,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 80,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116887583&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116887583&quot;,
+            &quot;duracion&quot;: 73,
+            &quot;costo&quot;: 47583.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 81,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781116888389&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781116888389&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 83,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116890040&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116890040&quot;,
+            &quot;duracion&quot;: 70,
+            &quot;costo&quot;: 50040.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 85,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116929272&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116929272&quot;,
+            &quot;duracion&quot;: 62,
+            &quot;costo&quot;: 39272.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 86,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116931415&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116931415&quot;,
+            &quot;duracion&quot;: 45,
+            &quot;costo&quot;: 41415.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 87,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116932581&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116932581&quot;,
+            &quot;duracion&quot;: 71,
+            &quot;costo&quot;: 42581.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 88,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116933886&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116933886&quot;,
+            &quot;duracion&quot;: 56,
+            &quot;costo&quot;: 43886.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 89,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116935139&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116935139&quot;,
+            &quot;duracion&quot;: 49,
+            &quot;costo&quot;: 45139.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 90,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116936104&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116936104&quot;,
+            &quot;duracion&quot;: 54,
+            &quot;costo&quot;: 46104.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 91,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116937014&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116937014&quot;,
+            &quot;duracion&quot;: 64,
+            &quot;costo&quot;: 47014.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 92,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116937935&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116937935&quot;,
+            &quot;duracion&quot;: 85,
+            &quot;costo&quot;: 47935.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 93,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116939182&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116939182&quot;,
+            &quot;duracion&quot;: 72,
+            &quot;costo&quot;: 49182.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 94,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116940317&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116940317&quot;,
+            &quot;duracion&quot;: 67,
+            &quot;costo&quot;: 50317.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 95,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116941451&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116941451&quot;,
+            &quot;duracion&quot;: 61,
+            &quot;costo&quot;: 51451.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 96,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116942436&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116942436&quot;,
+            &quot;duracion&quot;: 86,
+            &quot;costo&quot;: 52436.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 97,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116943293&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116943293&quot;,
+            &quot;duracion&quot;: 43,
+            &quot;costo&quot;: 53293.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 98,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116944448&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116944448&quot;,
+            &quot;duracion&quot;: 58,
+            &quot;costo&quot;: 54448.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 99,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116945728&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116945728&quot;,
+            &quot;duracion&quot;: 78,
+            &quot;costo&quot;: 55728.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 100,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 101,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116952320&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116952320&quot;,
+            &quot;duracion&quot;: 70,
+            &quot;costo&quot;: 12320.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 102,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781116952962&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781116952962&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 104,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781116954132&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781116954132&quot;,
+            &quot;duracion&quot;: 82,
+            &quot;costo&quot;: 14132.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 106,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 107,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117276696&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117276696&quot;,
+            &quot;duracion&quot;: 86,
+            &quot;costo&quot;: 36696.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 108,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117277236&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117277236&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 110,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117278224&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117278224&quot;,
+            &quot;duracion&quot;: 54,
+            &quot;costo&quot;: 38224.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 112,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 113,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117312962&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117312962&quot;,
+            &quot;duracion&quot;: 52,
+            &quot;costo&quot;: 22962.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 114,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117313664&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117313664&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 116,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117314889&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117314889&quot;,
+            &quot;duracion&quot;: 59,
+            &quot;costo&quot;: 24889.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 118,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 119,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117368366&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117368366&quot;,
+            &quot;duracion&quot;: 76,
+            &quot;costo&quot;: 28366.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 120,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117369449&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117369449&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 122,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117371655&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117371655&quot;,
+            &quot;duracion&quot;: 65,
+            &quot;costo&quot;: 31655.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 124,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 125,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117414765&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117414765&quot;,
+            &quot;duracion&quot;: 35,
+            &quot;costo&quot;: 24765.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 126,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117415614&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117415614&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 128,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117416716&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117416716&quot;,
+            &quot;duracion&quot;: 66,
+            &quot;costo&quot;: 26716.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 130,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 131,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117462828&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117462828&quot;,
+            &quot;duracion&quot;: 38,
+            &quot;costo&quot;: 22828.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 132,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117463832&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117463832&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 134,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117465321&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117465321&quot;,
+            &quot;duracion&quot;: 71,
+            &quot;costo&quot;: 25321.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 136,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 137,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117499070&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117499070&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 59070.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 138,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117499969&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117499969&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 140,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117501214&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117501214&quot;,
+            &quot;duracion&quot;: 84,
+            &quot;costo&quot;: 11214.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 142,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 143,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117722686&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117722686&quot;,
+            &quot;duracion&quot;: 36,
+            &quot;costo&quot;: 32686.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 144,
+            &quot;nombreServicio&quot;: &quot;Corte Moderno 1781117723665&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion actualizada 1781117723665&quot;,
+            &quot;duracion&quot;: 40,
+            &quot;costo&quot;: 30000.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 146,
+            &quot;nombreServicio&quot;: &quot;Servicio Test 1781117725106&quot;,
+            &quot;descripcion&quot;: &quot;Descripcion generada 1781117725106&quot;,
+            &quot;duracion&quot;: 56,
+            &quot;costo&quot;: 35106.00,
+            &quot;idEstado&quot;: 1
+        },
+        {
+            &quot;idServicio&quot;: 148,
+            &quot;nombreServicio&quot;: &quot;Corte de Cabello&quot;,
+            &quot;descripcion&quot;: &quot;Corte clasico para caballero&quot;,
+            &quot;duracion&quot;: 30,
+            &quot;costo&quot;: 25000.00,
+            &quot;idEstado&quot;: 1
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Servicio Test 1781119016190&quot;,
+    &quot;descripcion&quot;: &quot;Descripcion generada 1781119016190&quot;,
+    &quot;costo&quot;: 26190.0,
+    &quot;duracion&quot;: 60
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio creado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 149,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119016190&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119016190&quot;,
+        &quot;duracion&quot;: 60,
+        &quot;costo&quot;: 26190.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/149
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio obtenido&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 149,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119016190&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119016190&quot;,
+        &quot;duracion&quot;: 60,
+        &quot;costo&quot;: 26190.00,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Servicio Test 1781119016700&quot;,
+    &quot;descripcion&quot;: &quot;Descripcion generada 1781119016700&quot;,
+    &quot;costo&quot;: 26700.0,
+    &quot;duracion&quot;: 30
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio creado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 150,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119016700&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119016700&quot;,
+        &quot;duracion&quot;: 30,
+        &quot;costo&quot;: 26700.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/servicios/actualizar/150
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Corte Moderno 1781119016791&quot;,
+    &quot;descripcion&quot;: &quot;Descripcion actualizada 1781119016791&quot;,
+    &quot;costo&quot;: 30000.0,
+    &quot;duracion&quot;: 40
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio actualizado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 150,
+        &quot;nombreServicio&quot;: &quot;Corte Moderno 1781119016791&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion actualizada 1781119016791&quot;,
+        &quot;duracion&quot;: 40,
+        &quot;costo&quot;: 30000.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/150
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio obtenido&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 150,
+        &quot;nombreServicio&quot;: &quot;Corte Moderno 1781119016791&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion actualizada 1781119016791&quot;,
+        &quot;duracion&quot;: 40,
+        &quot;costo&quot;: 30000.00,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Servicio Test 1781119017346&quot;,
+    &quot;descripcion&quot;: &quot;Descripcion generada 1781119017346&quot;,
+    &quot;costo&quot;: 27346.0,
+    &quot;duracion&quot;: 76
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio creado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 151,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119017346&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119017346&quot;,
+        &quot;duracion&quot;: 76,
+        &quot;costo&quot;: 27346.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	DELETE
+Request URI:	http://localhost:8080/api/v1/servicios/eliminar/151
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio eliminado exitosamente&quot;,
+    &quot;data&quot;: null
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/151
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Servicio no encontrado con id: 151&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;Servicio Test 1781119017886&quot;,
+    &quot;descripcion&quot;: &quot;Descripcion generada 1781119017886&quot;,
+    &quot;costo&quot;: 27886.0,
+    &quot;duracion&quot;: 76
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio creado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 152,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119017886&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119017886&quot;,
+        &quot;duracion&quot;: 76,
+        &quot;costo&quot;: 27886.0,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/152
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Servicio obtenido&quot;,
+    &quot;data&quot;: {
+        &quot;idServicio&quot;: 152,
+        &quot;nombreServicio&quot;: &quot;Servicio Test 1781119017886&quot;,
+        &quot;descripcion&quot;: &quot;Descripcion generada 1781119017886&quot;,
+        &quot;duracion&quot;: 76,
+        &quot;costo&quot;: 27886.00,
+        &quot;idEstado&quot;: 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE4LCJleHAiOjE3ODEyMDU0MTh9.qXm-UJPJUXZUs2eu1uQA1DQkddVMNSPn6crjUXkh1i-dCx6xKckLIynLLSBT_3Y0Nl09WToS5F_4tiiFp0gTYQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE4LCJleHAiOjE3ODEyMDU0MTh9.qXm-UJPJUXZUs2eu1uQA1DQkddVMNSPn6crjUXkh1i-dCx6xKckLIynLLSBT_3Y0Nl09WToS5F_4tiiFp0gTYQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Connection: close
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;could not execute statement [La columna \&quot;costo\&quot; no permite valores nulos (NULL)\nNULL not allowed for column \&quot;costo\&quot;; SQL statement:\ninsert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default) [23502-214]] [insert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default)]; SQL [insert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default)]; constraint [null]&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/999999
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Servicio no encontrado con id: 999999&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/servicios/actualizar/999999
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;nombreServicio&quot;: &quot;N/A&quot;,
+    &quot;descripcion&quot;: &quot;N/A&quot;,
+    &quot;costo&quot;: 0.0,
+    &quot;duracion&quot;: 0
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Connection: close
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Servicio no encontrado con id: 999999&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	DELETE
+Request URI:	http://localhost:8080/api/v1/servicios/eliminar/999999
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Connection: close
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Servicio no encontrado con id: 999999&quot;,
+    &quot;data&quot;: null
+}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Crear un servicio exitosamente(gestion-de-servicios;crear-un-servicio-exitosamente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Crear un servicio exitosamente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar listado de servicios(gestion-de-servicios;consultar-listado-de-servicios)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar listado de servicios
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar servicio por ID(gestion-de-servicios;consultar-servicio-por-id)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar servicio por ID
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Actualizar un servicio existente(gestion-de-servicios;actualizar-un-servicio-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Actualizar un servicio existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Eliminar un servicio existente(gestion-de-servicios;eliminar-un-servicio-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Eliminar un servicio existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validar estructura de un servicio(gestion-de-servicios;validar-estructura-de-un-servicio)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Validar estructura de un servicio
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Crear servicio con body vacio(gestion-de-servicios;crear-servicio-con-body-vacio)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Crear servicio con body vacio
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar servicio inexistente(gestion-de-servicios;consultar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar servicio inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Actualizar servicio inexistente(gestion-de-servicios;actualizar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Actualizar servicio inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Eliminar servicio inexistente(gestion-de-servicios;eliminar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Eliminar servicio inexistente
+----------------------------------------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at 10/06/2026, 2:17:04 p. m.</p>
+</div>
+</div>
+</body>
+</html>

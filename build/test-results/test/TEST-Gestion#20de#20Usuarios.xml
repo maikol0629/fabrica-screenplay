@@ -1,0 +1,3202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Gestion de Usuarios" tests="13" skipped="0" failures="0" errors="0" timestamp="2026-06-10T19:16:59" hostname="FENIX" time="4.889">
+  <properties/>
+  <testcase name="Listar todas las personas" classname="Gestion de Usuarios" time="0.356"/>
+  <testcase name="Consultar persona por documento existente" classname="Gestion de Usuarios" time="0.383"/>
+  <testcase name="Consultar persona por email existente" classname="Gestion de Usuarios" time="0.284"/>
+  <testcase name="Listar barberos registrados" classname="Gestion de Usuarios" time="0.314"/>
+  <testcase name="Listar clientes bloqueados" classname="Gestion de Usuarios" time="0.4"/>
+  <testcase name="Registrar una nueva persona" classname="Gestion de Usuarios" time="0.5"/>
+  <testcase name="Cambiar rol de una persona" classname="Gestion de Usuarios" time="0.439"/>
+  <testcase name="Bloquear un cliente" classname="Gestion de Usuarios" time="0.431"/>
+  <testcase name="Desbloquear un cliente" classname="Gestion de Usuarios" time="0.532"/>
+  <testcase name="Consultar persona por documento inexistente" classname="Gestion de Usuarios" time="0.26"/>
+  <testcase name="Consultar persona por email inexistente" classname="Gestion de Usuarios" time="0.254"/>
+  <testcase name="Registrar persona con documento repetido" classname="Gestion de Usuarios" time="0.416"/>
+  <testcase name="Validar estructura de respuesta de persona" classname="Gestion de Usuarios" time="0.318"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Personas obtenidas",
+    "data": [
+        {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        },
+        {
+            "numeroDocumento": "DOC1781116136665",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116136665@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:56.852415"
+        },
+        {
+            "numeroDocumento": "DOC1781116137811",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116137811@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:57.996963"
+        },
+        {
+            "numeroDocumento": "DOC1781116138675",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116138675@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:58.813103"
+        },
+        {
+            "numeroDocumento": "DOC1781116139473",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116139473@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:59.622183"
+        },
+        {
+            "numeroDocumento": "DOC1781116140225",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116140225@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:00.402009"
+        },
+        {
+            "numeroDocumento": "DOC1781116140969",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116140969@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:01.106087"
+        },
+        {
+            "numeroDocumento": "DOC1781116141658",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116141658@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:01.788982"
+        },
+        {
+            "numeroDocumento": "DOC1781116142326",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116142326@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:02.452818"
+        },
+        {
+            "numeroDocumento": "DOC1781116143219",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116143219@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:03.352244"
+        },
+        {
+            "numeroDocumento": "DOC1781116143906",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116143906@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:04.050115"
+        },
+        {
+            "numeroDocumento": "DOC1781116144595",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116144595@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:04.725208"
+        },
+        {
+            "numeroDocumento": "DOC1781116145301",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116145301@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:05.433348"
+        },
+        {
+            "numeroDocumento": "DOC1781116146192",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116146192@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:06.39107"
+        },
+        {
+            "numeroDocumento": "DOC1781116146934",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116146934@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:07.072282"
+        },
+        {
+            "numeroDocumento": "DOC1781116147675",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116147675@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:07.862693"
+        },
+        {
+            "numeroDocumento": "DOC1781116562657",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116562657@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:02.814493"
+        },
+        {
+            "numeroDocumento": "DOC1781116563765",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116563765@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:03.908245"
+        },
+        {
+            "numeroDocumento": "DOC1781116564565",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116564565@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:04.708697"
+        },
+        {
+            "numeroDocumento": "DOC1781116565323",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116565323@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:05.45301"
+        },
+        {
+            "numeroDocumento": "DOC1781116566016",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116566016@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:06.145215"
+        },
+        {
+            "numeroDocumento": "DOC1781116566688",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116566688@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:06.818675"
+        },
+        {
+            "numeroDocumento": "DOC1781116567358",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116567358@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:07.498337"
+        },
+        {
+            "numeroDocumento": "DOC1781116568014",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116568014@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:08.145062"
+        },
+        {
+            "numeroDocumento": "DOC1781116569250",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116569250@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:09.429857"
+        },
+        {
+            "numeroDocumento": "DOC1781116570261",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116570261@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:10.411457"
+        },
+        {
+            "numeroDocumento": "DOC1781116570909",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116570909@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:11.041294"
+        },
+        {
+            "numeroDocumento": "DOC1781116571582",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116571582@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:11.714137"
+        },
+        {
+            "numeroDocumento": "DOC1781116572187",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116572187@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:12.313635"
+        },
+        {
+            "numeroDocumento": "DOC1781116572804",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116572804@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:12.950632"
+        },
+        {
+            "numeroDocumento": "DOC1781116573472",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116573472@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:13.593415"
+        },
+        {
+            "numeroDocumento": "DOC1781116782251",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116782251@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:42.40202"
+        },
+        {
+            "numeroDocumento": "DOC1781116784745",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116784745@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:44.903034"
+        },
+        {
+            "numeroDocumento": "DOC1781116785595",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116785595@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:45.758935"
+        },
+        {
+            "numeroDocumento": "DOC1781116786442",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116786442@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:46.601118"
+        },
+        {
+            "numeroDocumento": "DOC1781116787232",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116787232@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:47.377016"
+        },
+        {
+            "numeroDocumento": "DOC1781116787939",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116787939@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:48.099376"
+        },
+        {
+            "numeroDocumento": "DOC1781116788820",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116788820@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:48.977652"
+        },
+        {
+            "numeroDocumento": "DOC1781116789578",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116789578@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:49.745177"
+        },
+        {
+            "numeroDocumento": "DOC1781116791414",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116791414@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:51.575787"
+        },
+        {
+            "numeroDocumento": "DOC1781116792194",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116792194@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:52.370453"
+        },
+        {
+            "numeroDocumento": "DOC1781116793557",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116793557@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:53.705247"
+        },
+        {
+            "numeroDocumento": "DOC1781116794280",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116794280@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:54.448342"
+        },
+        {
+            "numeroDocumento": "DOC1781116795141",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116795141@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:55.30904"
+        },
+        {
+            "numeroDocumento": "DOC1781116795893",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116795893@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:56.058526"
+        },
+        {
+            "numeroDocumento": "DOC1781116796626",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116796626@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:56.804189"
+        },
+        {
+            "numeroDocumento": "DOC1781116867127",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116867127@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:07.340195"
+        },
+        {
+            "numeroDocumento": "DOC1781116868405",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116868405@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:08.59455"
+        },
+        {
+            "numeroDocumento": "DOC1781116869489",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116869489@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:09.744564"
+        },
+        {
+            "numeroDocumento": "DOC1781116870521",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116870521@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:10.684195"
+        },
+        {
+            "numeroDocumento": "DOC1781116871530",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116871530@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:11.717324"
+        },
+        {
+            "numeroDocumento": "DOC1781116872559",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116872559@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:12.783141"
+        },
+        {
+            "numeroDocumento": "DOC1781116873465",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116873465@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:13.615984"
+        },
+        {
+            "numeroDocumento": "DOC1781116874211",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116874211@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:14.377054"
+        },
+        {
+            "numeroDocumento": "DOC1781116875358",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116875358@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:15.646267"
+        },
+        {
+            "numeroDocumento": "DOC1781116876559",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116876559@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:16.747318"
+        },
+        {
+            "numeroDocumento": "DOC1781116877508",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116877508@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:17.691222"
+        },
+        {
+            "numeroDocumento": "DOC1781116878383",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116878383@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:18.575743"
+        },
+        {
+            "numeroDocumento": "DOC1781116879326",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116879326@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:19.543267"
+        },
+        {
+            "numeroDocumento": "DOC1781116880296",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116880296@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:20.440346"
+        },
+        {
+            "numeroDocumento": "DOC1781116881020",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116881020@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:21.228742"
+        },
+        {
+            "numeroDocumento": "DOC1781116929775",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116929775@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:10.097627"
+        },
+        {
+            "numeroDocumento": "DOC1781116931545",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116931545@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:11.781799"
+        },
+        {
+            "numeroDocumento": "DOC1781116932686",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116932686@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:12.892674"
+        },
+        {
+            "numeroDocumento": "DOC1781116933999",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116933999@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:14.235633"
+        },
+        {
+            "numeroDocumento": "DOC1781116935225",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116935225@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:15.435553"
+        },
+        {
+            "numeroDocumento": "DOC1781116936184",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116936184@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:16.366479"
+        },
+        {
+            "numeroDocumento": "DOC1781116937092",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116937092@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:17.28893"
+        },
+        {
+            "numeroDocumento": "DOC1781116938017",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116938017@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:18.20463"
+        },
+        {
+            "numeroDocumento": "DOC1781116939261",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116939261@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:19.473334"
+        },
+        {
+            "numeroDocumento": "DOC1781116940402",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116940402@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:20.622934"
+        },
+        {
+            "numeroDocumento": "DOC1781116941528",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116941528@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:21.753095"
+        },
+        {
+            "numeroDocumento": "DOC1781116942514",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116942514@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:22.702345"
+        },
+        {
+            "numeroDocumento": "DOC1781116943361",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116943361@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:23.558184"
+        },
+        {
+            "numeroDocumento": "DOC1781116944546",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116944546@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:24.852929"
+        },
+        {
+            "numeroDocumento": "DOC1781116945807",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116945807@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:26.045242"
+        },
+        {
+            "numeroDocumento": "TEST123",
+            "numeroCelular": "3001112222",
+            "email": "test@clean.com",
+            "nombrePersona": "Test",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:03:07.440583"
+        },
+        {
+            "numeroDocumento": "DOC1781118614537",
+            "numeroCelular": "3003334444",
+            "email": "nuevo_1781118614537@test.com",
+            "nombrePersona": "Nueva Persona",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:14.735714"
+        },
+        {
+            "numeroDocumento": "DOC1781118615143",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118615143@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T14:10:15.329868"
+        },
+        {
+            "numeroDocumento": "DOC1781118615786",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118615786@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 4,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:15.951014"
+        },
+        {
+            "numeroDocumento": "DOC1781118616298",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118616298@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:16.442474"
+        },
+        {
+            "numeroDocumento": "DOC1781118617405",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118617405@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:17.53266"
+        },
+        {
+            "numeroDocumento": "DOC1781118648719",
+            "numeroCelular": "3003334444",
+            "email": "nuevo_1781118648719@test.com",
+            "nombrePersona": "Nueva Persona",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:48.986759"
+        },
+        {
+            "numeroDocumento": "DOC1781118649438",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118649438@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T14:10:49.660308"
+        },
+        {
+            "numeroDocumento": "DOC1781118650274",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118650274@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 4,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:50.638784"
+        },
+        {
+            "numeroDocumento": "DOC1781118651139",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118651139@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:51.431467"
+        },
+        {
+            "numeroDocumento": "DOC1781118652658",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118652658@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:52.900608"
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/123456789
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona obtenida",
+    "data": {
+        "numeroDocumento": "123456789",
+        "numeroCelular": "3001234567",
+        "email": "admin@barberia.com",
+        "nombrePersona": "Admin",
+        "idEstado": 1,
+        "idRol": 1,
+        "fechaRegistro": "2026-06-10T13:25:57.770016"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/email/admin%40barberia.com
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Disposition: inline;filename=f.txt
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona obtenida",
+    "data": {
+        "numeroDocumento": "123456789",
+        "numeroCelular": "3001234567",
+        "email": "admin@barberia.com",
+        "nombrePersona": "Admin",
+        "idEstado": 1,
+        "idRol": 1,
+        "fechaRegistro": "2026-06-10T13:25:57.770016"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/barberos
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Barberos obtenidos",
+    "data": [
+        {
+            "numeroDocumento": "DOC1781116136665",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116136665@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:56.852415"
+        },
+        {
+            "numeroDocumento": "DOC1781116137811",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116137811@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:57.996963"
+        },
+        {
+            "numeroDocumento": "DOC1781116138675",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116138675@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:58.813103"
+        },
+        {
+            "numeroDocumento": "DOC1781116139473",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116139473@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:28:59.622183"
+        },
+        {
+            "numeroDocumento": "DOC1781116140225",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116140225@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:00.402009"
+        },
+        {
+            "numeroDocumento": "DOC1781116140969",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116140969@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:01.106087"
+        },
+        {
+            "numeroDocumento": "DOC1781116141658",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116141658@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:01.788982"
+        },
+        {
+            "numeroDocumento": "DOC1781116142326",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116142326@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:02.452818"
+        },
+        {
+            "numeroDocumento": "DOC1781116143219",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116143219@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:03.352244"
+        },
+        {
+            "numeroDocumento": "DOC1781116143906",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116143906@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:04.050115"
+        },
+        {
+            "numeroDocumento": "DOC1781116144595",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116144595@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:04.725208"
+        },
+        {
+            "numeroDocumento": "DOC1781116145301",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116145301@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:05.433348"
+        },
+        {
+            "numeroDocumento": "DOC1781116146192",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116146192@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:06.39107"
+        },
+        {
+            "numeroDocumento": "DOC1781116146934",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116146934@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:07.072282"
+        },
+        {
+            "numeroDocumento": "DOC1781116147675",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116147675@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:29:07.862693"
+        },
+        {
+            "numeroDocumento": "DOC1781116562657",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116562657@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:02.814493"
+        },
+        {
+            "numeroDocumento": "DOC1781116563765",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116563765@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:03.908245"
+        },
+        {
+            "numeroDocumento": "DOC1781116564565",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116564565@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:04.708697"
+        },
+        {
+            "numeroDocumento": "DOC1781116565323",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116565323@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:05.45301"
+        },
+        {
+            "numeroDocumento": "DOC1781116566016",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116566016@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:06.145215"
+        },
+        {
+            "numeroDocumento": "DOC1781116566688",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116566688@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:06.818675"
+        },
+        {
+            "numeroDocumento": "DOC1781116567358",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116567358@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:07.498337"
+        },
+        {
+            "numeroDocumento": "DOC1781116568014",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116568014@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:08.145062"
+        },
+        {
+            "numeroDocumento": "DOC1781116569250",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116569250@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:09.429857"
+        },
+        {
+            "numeroDocumento": "DOC1781116570261",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116570261@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:10.411457"
+        },
+        {
+            "numeroDocumento": "DOC1781116570909",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116570909@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:11.041294"
+        },
+        {
+            "numeroDocumento": "DOC1781116571582",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116571582@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:11.714137"
+        },
+        {
+            "numeroDocumento": "DOC1781116572187",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116572187@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:12.313635"
+        },
+        {
+            "numeroDocumento": "DOC1781116572804",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116572804@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:12.950632"
+        },
+        {
+            "numeroDocumento": "DOC1781116573472",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116573472@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:36:13.593415"
+        },
+        {
+            "numeroDocumento": "DOC1781116782251",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116782251@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:42.40202"
+        },
+        {
+            "numeroDocumento": "DOC1781116784745",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116784745@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:44.903034"
+        },
+        {
+            "numeroDocumento": "DOC1781116785595",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116785595@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:45.758935"
+        },
+        {
+            "numeroDocumento": "DOC1781116786442",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116786442@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:46.601118"
+        },
+        {
+            "numeroDocumento": "DOC1781116787232",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116787232@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:47.377016"
+        },
+        {
+            "numeroDocumento": "DOC1781116787939",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116787939@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:48.099376"
+        },
+        {
+            "numeroDocumento": "DOC1781116788820",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116788820@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:48.977652"
+        },
+        {
+            "numeroDocumento": "DOC1781116789578",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116789578@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:49.745177"
+        },
+        {
+            "numeroDocumento": "DOC1781116791414",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116791414@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:51.575787"
+        },
+        {
+            "numeroDocumento": "DOC1781116792194",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116792194@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:52.370453"
+        },
+        {
+            "numeroDocumento": "DOC1781116793557",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116793557@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:53.705247"
+        },
+        {
+            "numeroDocumento": "DOC1781116794280",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116794280@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:54.448342"
+        },
+        {
+            "numeroDocumento": "DOC1781116795141",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116795141@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:55.30904"
+        },
+        {
+            "numeroDocumento": "DOC1781116795893",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116795893@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:56.058526"
+        },
+        {
+            "numeroDocumento": "DOC1781116796626",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116796626@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:39:56.804189"
+        },
+        {
+            "numeroDocumento": "DOC1781116867127",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116867127@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:07.340195"
+        },
+        {
+            "numeroDocumento": "DOC1781116868405",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116868405@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:08.59455"
+        },
+        {
+            "numeroDocumento": "DOC1781116869489",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116869489@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:09.744564"
+        },
+        {
+            "numeroDocumento": "DOC1781116870521",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116870521@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:10.684195"
+        },
+        {
+            "numeroDocumento": "DOC1781116871530",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116871530@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:11.717324"
+        },
+        {
+            "numeroDocumento": "DOC1781116872559",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116872559@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:12.783141"
+        },
+        {
+            "numeroDocumento": "DOC1781116873465",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116873465@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:13.615984"
+        },
+        {
+            "numeroDocumento": "DOC1781116874211",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116874211@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:14.377054"
+        },
+        {
+            "numeroDocumento": "DOC1781116875358",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116875358@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:15.646267"
+        },
+        {
+            "numeroDocumento": "DOC1781116876559",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116876559@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:16.747318"
+        },
+        {
+            "numeroDocumento": "DOC1781116877508",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116877508@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:17.691222"
+        },
+        {
+            "numeroDocumento": "DOC1781116878383",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116878383@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:18.575743"
+        },
+        {
+            "numeroDocumento": "DOC1781116879326",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116879326@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:19.543267"
+        },
+        {
+            "numeroDocumento": "DOC1781116880296",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116880296@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:20.440346"
+        },
+        {
+            "numeroDocumento": "DOC1781116881020",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116881020@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:41:21.228742"
+        },
+        {
+            "numeroDocumento": "DOC1781116929775",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116929775@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:10.097627"
+        },
+        {
+            "numeroDocumento": "DOC1781116931545",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116931545@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:11.781799"
+        },
+        {
+            "numeroDocumento": "DOC1781116932686",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116932686@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:12.892674"
+        },
+        {
+            "numeroDocumento": "DOC1781116933999",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116933999@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:14.235633"
+        },
+        {
+            "numeroDocumento": "DOC1781116935225",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116935225@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:15.435553"
+        },
+        {
+            "numeroDocumento": "DOC1781116936184",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116936184@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:16.366479"
+        },
+        {
+            "numeroDocumento": "DOC1781116937092",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116937092@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:17.28893"
+        },
+        {
+            "numeroDocumento": "DOC1781116938017",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116938017@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:18.20463"
+        },
+        {
+            "numeroDocumento": "DOC1781116939261",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116939261@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:19.473334"
+        },
+        {
+            "numeroDocumento": "DOC1781116940402",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116940402@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:20.622934"
+        },
+        {
+            "numeroDocumento": "DOC1781116941528",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116941528@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:21.753095"
+        },
+        {
+            "numeroDocumento": "DOC1781116942514",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116942514@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:22.702345"
+        },
+        {
+            "numeroDocumento": "DOC1781116943361",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116943361@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:23.558184"
+        },
+        {
+            "numeroDocumento": "DOC1781116944546",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116944546@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:24.852929"
+        },
+        {
+            "numeroDocumento": "DOC1781116945807",
+            "numeroCelular": "300000000",
+            "email": "barbero_1781116945807@test.com",
+            "nombrePersona": "Barbero Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T13:42:26.045242"
+        },
+        {
+            "numeroDocumento": "DOC1781118615143",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118615143@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T14:10:15.329868"
+        },
+        {
+            "numeroDocumento": "DOC1781118649438",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118649438@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 1,
+            "idRol": 2,
+            "fechaRegistro": "2026-06-10T14:10:49.660308"
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/bloqueados
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Clientes bloqueados obtenidos",
+    "data": [
+        {
+            "numeroDocumento": "DOC1781118615786",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118615786@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 4,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:15.951014"
+        },
+        {
+            "numeroDocumento": "DOC1781118650274",
+            "numeroCelular": "3001112222",
+            "email": "test_1781118650274@test.com",
+            "nombrePersona": "Persona Test",
+            "idEstado": 4,
+            "idRol": 3,
+            "fechaRegistro": "2026-06-10T14:10:50.638784"
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119021885",
+    "numeroCelular": "3003334444",
+    "email": "nuevo_1781119021885@test.com",
+    "nombrePersona": "Nueva Persona",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona registrada exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119021885",
+        "numeroCelular": "3003334444",
+        "email": "nuevo_1781119021885@test.com",
+        "nombrePersona": "Nueva Persona",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:02.035786526"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119022353",
+    "numeroCelular": "3001112222",
+    "email": "test_1781119022353@test.com",
+    "nombrePersona": "Persona Test",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona registrada exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119022353",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119022353@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:02.483948371"
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119022353/rol?nuevoRol=2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Rol actualizado exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119022353",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119022353@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 2,
+        "fechaRegistro": "2026-06-10T14:17:02.483948"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119022782",
+    "numeroCelular": "3001112222",
+    "email": "test_1781119022782@test.com",
+    "nombrePersona": "Persona Test",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona registrada exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119022782",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119022782@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:02.908631905"
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119022782/bloquear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Cliente bloqueado exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119022782",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119022782@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 4,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:02.908632"
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOC1781119022782
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona obtenida",
+    "data": {
+        "numeroDocumento": "DOC1781119022782",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119022782@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 4,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:02.908632"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119023260",
+    "numeroCelular": "3001112222",
+    "email": "test_1781119023260@test.com",
+    "nombrePersona": "Persona Test",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona registrada exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119023260",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119023260@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:03.397641959"
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119023260/bloquear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Cliente bloqueado exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119023260",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119023260@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 4,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:03.397642"
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119023260/desbloquear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Cliente desbloqueado exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119023260",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119023260@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:03.397642"
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOC1781119023260
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona obtenida",
+    "data": {
+        "numeroDocumento": "DOC1781119023260",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119023260@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:03.397642"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOCNOEXISTE
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Persona no encontrada con documento: DOCNOEXISTE",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/email/noexiste%40test.com
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Disposition: inline;filename=f.txt
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Persona no encontrada con email: noexiste@test.com",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119024277",
+    "numeroCelular": "3001112222",
+    "email": "test_1781119024277@test.com",
+    "nombrePersona": "Persona Test",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona registrada exitosamente",
+    "data": {
+        "numeroDocumento": "DOC1781119024277",
+        "numeroCelular": "3001112222",
+        "email": "test_1781119024277@test.com",
+        "nombrePersona": "Persona Test",
+        "idEstado": 1,
+        "idRol": 3,
+        "fechaRegistro": "2026-06-10T14:17:04.42312112"
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "numeroDocumento": "DOC1781119024277",
+    "numeroCelular": "3005556666",
+    "email": "otro@test.com",
+    "nombrePersona": "Otra Persona",
+    "contraseña": "password123",
+    "confirmarContraseña": "password123"
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Connection: close
+
+{
+    "success": false,
+    "message": "Error: El número de documento ya está registrado",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/123456789
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Persona obtenida",
+    "data": {
+        "numeroDocumento": "123456789",
+        "numeroCelular": "3001234567",
+        "email": "admin@barberia.com",
+        "nombrePersona": "Admin",
+        "idEstado": 1,
+        "idRol": 1,
+        "fechaRegistro": "2026-06-10T13:25:57.770016"
+    }
+}
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar todas las personas(gestion-de-usuarios;listar-todas-las-personas)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar todas las personas
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por documento existente(gestion-de-usuarios;consultar-persona-por-documento-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por documento existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por email existente(gestion-de-usuarios;consultar-persona-por-email-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por email existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar barberos registrados(gestion-de-usuarios;listar-barberos-registrados)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar barberos registrados
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar clientes bloqueados(gestion-de-usuarios;listar-clientes-bloqueados)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar clientes bloqueados
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Registrar una nueva persona(gestion-de-usuarios;registrar-una-nueva-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Registrar una nueva persona
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Cambiar rol de una persona(gestion-de-usuarios;cambiar-rol-de-una-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Cambiar rol de una persona
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Bloquear un cliente(gestion-de-usuarios;bloquear-un-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Bloquear un cliente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Desbloquear un cliente(gestion-de-usuarios;desbloquear-un-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Desbloquear un cliente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por documento inexistente(gestion-de-usuarios;consultar-persona-por-documento-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por documento inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por email inexistente(gestion-de-usuarios;consultar-persona-por-email-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por email inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Registrar persona con documento repetido(gestion-de-usuarios;registrar-persona-con-documento-repetido)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Registrar persona con documento repetido
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validar estructura de respuesta de persona(gestion-de-usuarios;validar-estructura-de-respuesta-de-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Validar estructura de respuesta de persona
+----------------------------------------------------------------------
+]]></system-err>
+</testsuite>

@@ -1,0 +1,3357 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Gestion de Usuarios</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Gestion de Usuarios</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Gestion de Usuarios</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">13</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.887s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Bloquear un cliente</td>
+<td class="success">0.431s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Cambiar rol de una persona</td>
+<td class="success">0.439s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar persona por documento existente</td>
+<td class="success">0.383s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar persona por documento inexistente</td>
+<td class="success">0.260s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar persona por email existente</td>
+<td class="success">0.284s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Consultar persona por email inexistente</td>
+<td class="success">0.254s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Desbloquear un cliente</td>
+<td class="success">0.532s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Listar barberos registrados</td>
+<td class="success">0.314s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Listar clientes bloqueados</td>
+<td class="success">0.400s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Listar todas las personas</td>
+<td class="success">0.356s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Registrar persona con documento repetido</td>
+<td class="success">0.416s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Registrar una nueva persona</td>
+<td class="success">0.500s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Validar estructura de respuesta de persona</td>
+<td class="success">0.318s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Personas obtenidas&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116136665&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116136665@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:56.852415&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116137811&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116137811@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:57.996963&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116138675&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116138675@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:58.813103&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116139473&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116139473@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:59.622183&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116140225&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116140225@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:00.402009&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116140969&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116140969@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:01.106087&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116141658&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116141658@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:01.788982&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116142326&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116142326@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:02.452818&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116143219&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116143219@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:03.352244&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116143906&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116143906@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:04.050115&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116144595&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116144595@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:04.725208&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116145301&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116145301@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:05.433348&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116146192&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116146192@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:06.39107&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116146934&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116146934@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:07.072282&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116147675&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116147675@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:07.862693&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116562657&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116562657@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:02.814493&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116563765&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116563765@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:03.908245&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116564565&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116564565@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:04.708697&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116565323&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116565323@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:05.45301&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116566016&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116566016@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:06.145215&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116566688&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116566688@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:06.818675&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116567358&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116567358@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:07.498337&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116568014&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116568014@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:08.145062&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116569250&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116569250@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:09.429857&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116570261&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116570261@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:10.411457&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116570909&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116570909@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:11.041294&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116571582&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116571582@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:11.714137&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116572187&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116572187@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:12.313635&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116572804&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116572804@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:12.950632&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116573472&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116573472@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:13.593415&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116782251&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116782251@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:42.40202&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116784745&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116784745@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:44.903034&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116785595&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116785595@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:45.758935&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116786442&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116786442@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:46.601118&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116787232&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116787232@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:47.377016&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116787939&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116787939@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:48.099376&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116788820&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116788820@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:48.977652&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116789578&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116789578@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:49.745177&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116791414&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116791414@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:51.575787&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116792194&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116792194@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:52.370453&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116793557&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116793557@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:53.705247&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116794280&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116794280@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:54.448342&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116795141&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116795141@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:55.30904&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116795893&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116795893@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:56.058526&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116796626&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116796626@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:56.804189&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116867127&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116867127@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:07.340195&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116868405&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116868405@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:08.59455&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116869489&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116869489@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:09.744564&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116870521&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116870521@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:10.684195&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116871530&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116871530@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:11.717324&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116872559&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116872559@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:12.783141&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116873465&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116873465@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:13.615984&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116874211&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116874211@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:14.377054&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116875358&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116875358@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:15.646267&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116876559&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116876559@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:16.747318&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116877508&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116877508@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:17.691222&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116878383&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116878383@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:18.575743&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116879326&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116879326@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:19.543267&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116880296&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116880296@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:20.440346&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116881020&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116881020@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:21.228742&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116929775&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116929775@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:10.097627&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116931545&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116931545@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:11.781799&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116932686&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116932686@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:12.892674&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116933999&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116933999@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:14.235633&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116935225&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116935225@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:15.435553&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116936184&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116936184@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:16.366479&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116937092&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116937092@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:17.28893&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116938017&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116938017@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:18.20463&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116939261&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116939261@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:19.473334&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116940402&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116940402@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:20.622934&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116941528&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116941528@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:21.753095&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116942514&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116942514@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:22.702345&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116943361&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116943361@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:23.558184&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116944546&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116944546@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:24.852929&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116945807&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116945807@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:26.045242&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;TEST123&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test@clean.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:03:07.440583&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118614537&quot;,
+            &quot;numeroCelular&quot;: &quot;3003334444&quot;,
+            &quot;email&quot;: &quot;nuevo_1781118614537@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Nueva Persona&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:14.735714&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118615143&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118615143@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:15.329868&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118615786&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118615786@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 4,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:15.951014&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118616298&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118616298@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:16.442474&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118617405&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118617405@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:17.53266&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118648719&quot;,
+            &quot;numeroCelular&quot;: &quot;3003334444&quot;,
+            &quot;email&quot;: &quot;nuevo_1781118648719@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Nueva Persona&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:48.986759&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118649438&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118649438@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:49.660308&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118650274&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118650274@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 4,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:50.638784&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118651139&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118651139@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:51.431467&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118652658&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118652658@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:52.900608&quot;
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/123456789
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona obtenida&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+        &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+        &quot;email&quot;: &quot;admin@barberia.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Admin&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 1,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/email/admin%40barberia.com
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIwLCJleHAiOjE3ODEyMDU0MjB9.cc0hXh4YLuJuZsMhG2P5MoVa9nBTwAgp-wvPtErTWgY6YxeyINMNhPug-H53R7gFjktDNMqcnHanDxhSSuo_Yg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Disposition: inline;filename=f.txt
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona obtenida&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+        &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+        &quot;email&quot;: &quot;admin@barberia.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Admin&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 1,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:00 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/barberos
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Barberos obtenidos&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116136665&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116136665@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:56.852415&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116137811&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116137811@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:57.996963&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116138675&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116138675@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:58.813103&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116139473&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116139473@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:28:59.622183&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116140225&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116140225@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:00.402009&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116140969&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116140969@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:01.106087&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116141658&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116141658@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:01.788982&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116142326&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116142326@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:02.452818&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116143219&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116143219@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:03.352244&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116143906&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116143906@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:04.050115&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116144595&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116144595@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:04.725208&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116145301&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116145301@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:05.433348&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116146192&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116146192@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:06.39107&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116146934&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116146934@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:07.072282&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116147675&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116147675@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:29:07.862693&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116562657&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116562657@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:02.814493&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116563765&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116563765@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:03.908245&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116564565&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116564565@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:04.708697&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116565323&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116565323@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:05.45301&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116566016&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116566016@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:06.145215&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116566688&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116566688@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:06.818675&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116567358&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116567358@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:07.498337&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116568014&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116568014@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:08.145062&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116569250&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116569250@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:09.429857&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116570261&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116570261@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:10.411457&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116570909&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116570909@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:11.041294&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116571582&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116571582@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:11.714137&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116572187&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116572187@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:12.313635&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116572804&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116572804@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:12.950632&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116573472&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116573472@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:36:13.593415&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116782251&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116782251@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:42.40202&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116784745&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116784745@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:44.903034&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116785595&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116785595@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:45.758935&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116786442&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116786442@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:46.601118&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116787232&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116787232@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:47.377016&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116787939&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116787939@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:48.099376&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116788820&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116788820@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:48.977652&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116789578&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116789578@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:49.745177&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116791414&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116791414@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:51.575787&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116792194&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116792194@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:52.370453&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116793557&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116793557@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:53.705247&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116794280&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116794280@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:54.448342&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116795141&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116795141@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:55.30904&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116795893&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116795893@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:56.058526&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116796626&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116796626@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:39:56.804189&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116867127&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116867127@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:07.340195&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116868405&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116868405@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:08.59455&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116869489&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116869489@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:09.744564&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116870521&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116870521@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:10.684195&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116871530&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116871530@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:11.717324&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116872559&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116872559@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:12.783141&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116873465&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116873465@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:13.615984&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116874211&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116874211@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:14.377054&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116875358&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116875358@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:15.646267&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116876559&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116876559@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:16.747318&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116877508&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116877508@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:17.691222&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116878383&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116878383@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:18.575743&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116879326&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116879326@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:19.543267&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116880296&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116880296@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:20.440346&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116881020&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116881020@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:41:21.228742&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116929775&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116929775@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:10.097627&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116931545&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116931545@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:11.781799&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116932686&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116932686@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:12.892674&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116933999&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116933999@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:14.235633&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116935225&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116935225@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:15.435553&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116936184&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116936184@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:16.366479&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116937092&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116937092@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:17.28893&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116938017&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116938017@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:18.20463&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116939261&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116939261@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:19.473334&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116940402&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116940402@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:20.622934&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116941528&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116941528@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:21.753095&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116942514&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116942514@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:22.702345&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116943361&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116943361@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:23.558184&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116944546&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116944546@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:24.852929&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781116945807&quot;,
+            &quot;numeroCelular&quot;: &quot;300000000&quot;,
+            &quot;email&quot;: &quot;barbero_1781116945807@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Barbero Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:42:26.045242&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118615143&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118615143@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:15.329868&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118649438&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118649438@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 2,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:49.660308&quot;
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/bloqueados
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Clientes bloqueados obtenidos&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118615786&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118615786@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 4,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:15.951014&quot;
+        },
+        {
+            &quot;numeroDocumento&quot;: &quot;DOC1781118650274&quot;,
+            &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+            &quot;email&quot;: &quot;test_1781118650274@test.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+            &quot;idEstado&quot;: 4,
+            &quot;idRol&quot;: 3,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T14:10:50.638784&quot;
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIxLCJleHAiOjE3ODEyMDU0MjF9.dzj7IAgyW_ihhj2zxbp8B1gSaXxIHWki16-To8lnYnE7HKe-HzKd3kJjyL7buOJz9Y3Y1mer-hDBExLnxhmu9A
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119021885&quot;,
+    &quot;numeroCelular&quot;: &quot;3003334444&quot;,
+    &quot;email&quot;: &quot;nuevo_1781119021885@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Nueva Persona&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:01 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona registrada exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119021885&quot;,
+        &quot;numeroCelular&quot;: &quot;3003334444&quot;,
+        &quot;email&quot;: &quot;nuevo_1781119021885@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Nueva Persona&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.035786526&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119022353&quot;,
+    &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+    &quot;email&quot;: &quot;test_1781119022353@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona registrada exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119022353&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119022353@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.483948371&quot;
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119022353/rol?nuevoRol=2
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Rol actualizado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119022353&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119022353@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 2,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.483948&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119022782&quot;,
+    &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+    &quot;email&quot;: &quot;test_1781119022782@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona registrada exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119022782&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119022782@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.908631905&quot;
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119022782/bloquear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Cliente bloqueado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119022782&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119022782@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 4,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.908632&quot;
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOC1781119022782
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIyLCJleHAiOjE3ODEyMDU0MjJ9.Tg6Rh8q-yPE1TdjxU7LBdR82A4GLH3oKNf3vZ2qHyZpwR24CrnxjUgktHqc6V6SB_iB2U5BnQLnpO-PdE5piuQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona obtenida&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119022782&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119022782@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 4,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:02.908632&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:02 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119023260&quot;,
+    &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+    &quot;email&quot;: &quot;test_1781119023260@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona registrada exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119023260&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119023260@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:03.397641959&quot;
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119023260/bloquear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Cliente bloqueado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119023260&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119023260@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 4,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:03.397642&quot;
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/personas/DOC1781119023260/desbloquear
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Cliente desbloqueado exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119023260&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119023260@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:03.397642&quot;
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOC1781119023260
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona obtenida&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119023260&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119023260@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:03.397642&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/DOCNOEXISTE
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Persona no encontrada con documento: DOCNOEXISTE&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/email/noexiste%40test.com
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDIzLCJleHAiOjE3ODEyMDU0MjN9.DHDP4LLyRRL-A5I8tj1vqqPzA968ydYnh6iaPpzH_rzhJplCgZOLzxP0g6HKVGZ_acspKQxlixBqvf0XomzacQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+Content-Disposition: inline;filename=f.txt
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Persona no encontrada con email: noexiste@test.com&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:03 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119024277&quot;,
+    &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+    &quot;email&quot;: &quot;test_1781119024277@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona registrada exitosamente&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;DOC1781119024277&quot;,
+        &quot;numeroCelular&quot;: &quot;3001112222&quot;,
+        &quot;email&quot;: &quot;test_1781119024277@test.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Persona Test&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 3,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T14:17:04.42312112&quot;
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/personas/registro
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;numeroDocumento&quot;: &quot;DOC1781119024277&quot;,
+    &quot;numeroCelular&quot;: &quot;3005556666&quot;,
+    &quot;email&quot;: &quot;otro@test.com&quot;,
+    &quot;nombrePersona&quot;: &quot;Otra Persona&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;,
+    &quot;confirmarContraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Connection: close
+
+{
+    &quot;success&quot;: false,
+    &quot;message&quot;: &quot;Error: El número de documento ya está registrado&quot;,
+    &quot;data&quot;: null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;email&quot;: &quot;admin@barberia.com&quot;,
+    &quot;contraseña&quot;: &quot;password123&quot;
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Login exitoso&quot;,
+    &quot;data&quot;: {
+        &quot;token&quot;: &quot;eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA&quot;,
+        &quot;type&quot;: &quot;Bearer&quot;,
+        &quot;usuario&quot;: {
+            &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+            &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+            &quot;email&quot;: &quot;admin@barberia.com&quot;,
+            &quot;nombrePersona&quot;: &quot;Admin&quot;,
+            &quot;idEstado&quot;: 1,
+            &quot;idRol&quot;: 1,
+            &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/personas/documento/123456789
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDI0LCJleHAiOjE3ODEyMDU0MjR9.A3KHXyES3uAFKniZ3Q78qIbumCO3bZ5FwI_-LdclvDxG8gFvkwXoEn4bM_o7ZFPjxDHCGSylJwEe0Yfc4mdvjA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:17:04 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    &quot;success&quot;: true,
+    &quot;message&quot;: &quot;Persona obtenida&quot;,
+    &quot;data&quot;: {
+        &quot;numeroDocumento&quot;: &quot;123456789&quot;,
+        &quot;numeroCelular&quot;: &quot;3001234567&quot;,
+        &quot;email&quot;: &quot;admin@barberia.com&quot;,
+        &quot;nombrePersona&quot;: &quot;Admin&quot;,
+        &quot;idEstado&quot;: 1,
+        &quot;idRol&quot;: 1,
+        &quot;fechaRegistro&quot;: &quot;2026-06-10T13:25:57.770016&quot;
+    }
+}
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar todas las personas(gestion-de-usuarios;listar-todas-las-personas)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar todas las personas
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por documento existente(gestion-de-usuarios;consultar-persona-por-documento-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por documento existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por email existente(gestion-de-usuarios;consultar-persona-por-email-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por email existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar barberos registrados(gestion-de-usuarios;listar-barberos-registrados)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar barberos registrados
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Listar clientes bloqueados(gestion-de-usuarios;listar-clientes-bloqueados)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Listar clientes bloqueados
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Registrar una nueva persona(gestion-de-usuarios;registrar-una-nueva-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Registrar una nueva persona
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Cambiar rol de una persona(gestion-de-usuarios;cambiar-rol-de-una-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Cambiar rol de una persona
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Bloquear un cliente(gestion-de-usuarios;bloquear-un-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Bloquear un cliente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Desbloquear un cliente(gestion-de-usuarios;desbloquear-un-cliente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Desbloquear un cliente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por documento inexistente(gestion-de-usuarios;consultar-persona-por-documento-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por documento inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar persona por email inexistente(gestion-de-usuarios;consultar-persona-por-email-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar persona por email inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Registrar persona con documento repetido(gestion-de-usuarios;registrar-persona-con-documento-repetido)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Registrar persona con documento repetido
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validar estructura de respuesta de persona(gestion-de-usuarios;validar-estructura-de-respuesta-de-persona)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Validar estructura de respuesta de persona
+----------------------------------------------------------------------
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.10</a> at 10/06/2026, 2:17:04 p. m.</p>
+</div>
+</div>
+</body>
+</html>

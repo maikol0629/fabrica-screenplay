@@ -1,0 +1,2308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Gestion de Servicios" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-06-10T19:16:54" hostname="FENIX" time="5.062">
+  <properties/>
+  <testcase name="Crear un servicio exitosamente" classname="Gestion de Servicios" time="0.54"/>
+  <testcase name="Consultar listado de servicios" classname="Gestion de Servicios" time="0.551"/>
+  <testcase name="Consultar servicio por ID" classname="Gestion de Servicios" time="0.54"/>
+  <testcase name="Actualizar un servicio existente" classname="Gestion de Servicios" time="0.616"/>
+  <testcase name="Eliminar un servicio existente" classname="Gestion de Servicios" time="0.627"/>
+  <testcase name="Validar estructura de un servicio" classname="Gestion de Servicios" time="0.601"/>
+  <testcase name="Crear servicio con body vacio" classname="Gestion de Servicios" time="0.466"/>
+  <testcase name="Consultar servicio inexistente" classname="Gestion de Servicios" time="0.481"/>
+  <testcase name="Actualizar servicio inexistente" classname="Gestion de Servicios" time="0.306"/>
+  <testcase name="Eliminar servicio inexistente" classname="Gestion de Servicios" time="0.334"/>
+  <system-out><![CDATA[Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Corte de Cabello",
+    "descripcion": "Corte clasico para caballero",
+    "costo": 25000.0,
+    "duracion": 30
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:54 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio creado exitosamente",
+    "data": {
+        "idServicio": 148,
+        "nombreServicio": "Corte de Cabello",
+        "descripcion": "Corte clasico para caballero",
+        "duracion": 30,
+        "costo": 25000.0,
+        "idEstado": 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE1LCJleHAiOjE3ODEyMDU0MTV9.8RX1VavA0QA04KKEZutOXXrvi-vdB9f8JDF_C32k7zbQV5RM41OXyhWkbDsCghM0zPeQARo_4a2H_4H2gaQkbA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicios obtenidos",
+    "data": [
+        {
+            "idServicio": 1,
+            "nombreServicio": "Servicio Test 1781116136031",
+            "descripcion": "Descripcion generada 1781116136031",
+            "duracion": 81,
+            "costo": 46031.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 2,
+            "nombreServicio": "Servicio Test 1781116137718",
+            "descripcion": "Descripcion generada 1781116137718",
+            "duracion": 88,
+            "costo": 47718.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 3,
+            "nombreServicio": "Servicio Test 1781116138600",
+            "descripcion": "Descripcion generada 1781116138600",
+            "duracion": 70,
+            "costo": 48600.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 4,
+            "nombreServicio": "Servicio Test 1781116139393",
+            "descripcion": "Descripcion generada 1781116139393",
+            "duracion": 83,
+            "costo": 49393.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 5,
+            "nombreServicio": "Servicio Test 1781116140151",
+            "descripcion": "Descripcion generada 1781116140151",
+            "duracion": 61,
+            "costo": 50151.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 6,
+            "nombreServicio": "Servicio Test 1781116140905",
+            "descripcion": "Descripcion generada 1781116140905",
+            "duracion": 35,
+            "costo": 50905.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 7,
+            "nombreServicio": "Servicio Test 1781116141595",
+            "descripcion": "Descripcion generada 1781116141595",
+            "duracion": 65,
+            "costo": 51595.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 8,
+            "nombreServicio": "Servicio Test 1781116142272",
+            "descripcion": "Descripcion generada 1781116142272",
+            "duracion": 82,
+            "costo": 52272.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 9,
+            "nombreServicio": "Servicio Test 1781116143154",
+            "descripcion": "Descripcion generada 1781116143154",
+            "duracion": 64,
+            "costo": 53154.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 10,
+            "nombreServicio": "Servicio Test 1781116143841",
+            "descripcion": "Descripcion generada 1781116143841",
+            "duracion": 31,
+            "costo": 53841.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 11,
+            "nombreServicio": "Servicio Test 1781116144541",
+            "descripcion": "Descripcion generada 1781116144541",
+            "duracion": 71,
+            "costo": 54541.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 12,
+            "nombreServicio": "Servicio Test 1781116145252",
+            "descripcion": "Descripcion generada 1781116145252",
+            "duracion": 62,
+            "costo": 55252.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 13,
+            "nombreServicio": "Servicio Test 1781116146098",
+            "descripcion": "Descripcion generada 1781116146098",
+            "duracion": 68,
+            "costo": 56098.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 14,
+            "nombreServicio": "Servicio Test 1781116146880",
+            "descripcion": "Descripcion generada 1781116146880",
+            "duracion": 70,
+            "costo": 56880.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 15,
+            "nombreServicio": "Servicio Test 1781116147605",
+            "descripcion": "Descripcion generada 1781116147605",
+            "duracion": 75,
+            "costo": 57605.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 16,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 17,
+            "nombreServicio": "Servicio Test 1781116151750",
+            "descripcion": "Descripcion generada 1781116151750",
+            "duracion": 80,
+            "costo": 11750.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 18,
+            "nombreServicio": "Corte Moderno 1781116152168",
+            "descripcion": "Descripcion actualizada 1781116152168",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 20,
+            "nombreServicio": "Servicio Test 1781116152969",
+            "descripcion": "Descripcion generada 1781116152969",
+            "duracion": 39,
+            "costo": 12969.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 22,
+            "nombreServicio": "Servicio Test 1781116561864",
+            "descripcion": "Descripcion generada 1781116561864",
+            "duracion": 34,
+            "costo": 21864.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 23,
+            "nombreServicio": "Servicio Test 1781116563684",
+            "descripcion": "Descripcion generada 1781116563684",
+            "duracion": 54,
+            "costo": 23684.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 24,
+            "nombreServicio": "Servicio Test 1781116564475",
+            "descripcion": "Descripcion generada 1781116564475",
+            "duracion": 65,
+            "costo": 24475.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 25,
+            "nombreServicio": "Servicio Test 1781116565255",
+            "descripcion": "Descripcion generada 1781116565255",
+            "duracion": 65,
+            "costo": 25255.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 26,
+            "nombreServicio": "Servicio Test 1781116565947",
+            "descripcion": "Descripcion generada 1781116565947",
+            "duracion": 37,
+            "costo": 25947.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 27,
+            "nombreServicio": "Servicio Test 1781116566631",
+            "descripcion": "Descripcion generada 1781116566631",
+            "duracion": 61,
+            "costo": 26631.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 28,
+            "nombreServicio": "Servicio Test 1781116567302",
+            "descripcion": "Descripcion generada 1781116567302",
+            "duracion": 72,
+            "costo": 27302.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 29,
+            "nombreServicio": "Servicio Test 1781116567956",
+            "descripcion": "Descripcion generada 1781116567956",
+            "duracion": 66,
+            "costo": 27956.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 30,
+            "nombreServicio": "Servicio Test 1781116569172",
+            "descripcion": "Descripcion generada 1781116569172",
+            "duracion": 82,
+            "costo": 29172.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 31,
+            "nombreServicio": "Servicio Test 1781116570207",
+            "descripcion": "Descripcion generada 1781116570207",
+            "duracion": 37,
+            "costo": 30207.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 32,
+            "nombreServicio": "Servicio Test 1781116570852",
+            "descripcion": "Descripcion generada 1781116570852",
+            "duracion": 82,
+            "costo": 30852.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 33,
+            "nombreServicio": "Servicio Test 1781116571525",
+            "descripcion": "Descripcion generada 1781116571525",
+            "duracion": 35,
+            "costo": 31525.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 34,
+            "nombreServicio": "Servicio Test 1781116572138",
+            "descripcion": "Descripcion generada 1781116572138",
+            "duracion": 48,
+            "costo": 32138.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 35,
+            "nombreServicio": "Servicio Test 1781116572756",
+            "descripcion": "Descripcion generada 1781116572756",
+            "duracion": 66,
+            "costo": 32756.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 36,
+            "nombreServicio": "Servicio Test 1781116573418",
+            "descripcion": "Descripcion generada 1781116573418",
+            "duracion": 68,
+            "costo": 33418.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 37,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 38,
+            "nombreServicio": "Servicio Test 1781116577230",
+            "descripcion": "Descripcion generada 1781116577230",
+            "duracion": 40,
+            "costo": 37230.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 39,
+            "nombreServicio": "Corte Moderno 1781116577653",
+            "descripcion": "Descripcion actualizada 1781116577653",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 41,
+            "nombreServicio": "Servicio Test 1781116578291",
+            "descripcion": "Descripcion generada 1781116578291",
+            "duracion": 81,
+            "costo": 38291.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 43,
+            "nombreServicio": "Servicio Test 1781116781645",
+            "descripcion": "Descripcion generada 1781116781645",
+            "duracion": 35,
+            "costo": 41645.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 44,
+            "nombreServicio": "Servicio Test 1781116784658",
+            "descripcion": "Descripcion generada 1781116784658",
+            "duracion": 48,
+            "costo": 44658.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 45,
+            "nombreServicio": "Servicio Test 1781116785514",
+            "descripcion": "Descripcion generada 1781116785514",
+            "duracion": 64,
+            "costo": 45514.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 46,
+            "nombreServicio": "Servicio Test 1781116786379",
+            "descripcion": "Descripcion generada 1781116786379",
+            "duracion": 89,
+            "costo": 46379.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 47,
+            "nombreServicio": "Servicio Test 1781116787162",
+            "descripcion": "Descripcion generada 1781116787162",
+            "duracion": 32,
+            "costo": 47162.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 48,
+            "nombreServicio": "Servicio Test 1781116787879",
+            "descripcion": "Descripcion generada 1781116787879",
+            "duracion": 89,
+            "costo": 47879.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 49,
+            "nombreServicio": "Servicio Test 1781116788746",
+            "descripcion": "Descripcion generada 1781116788746",
+            "duracion": 56,
+            "costo": 48746.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 50,
+            "nombreServicio": "Servicio Test 1781116789504",
+            "descripcion": "Descripcion generada 1781116789504",
+            "duracion": 34,
+            "costo": 49504.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 51,
+            "nombreServicio": "Servicio Test 1781116791356",
+            "descripcion": "Descripcion generada 1781116791356",
+            "duracion": 86,
+            "costo": 51356.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 52,
+            "nombreServicio": "Servicio Test 1781116792125",
+            "descripcion": "Descripcion generada 1781116792125",
+            "duracion": 75,
+            "costo": 52125.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 53,
+            "nombreServicio": "Servicio Test 1781116792915",
+            "descripcion": "Descripcion generada 1781116792915",
+            "duracion": 85,
+            "costo": 52915.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 54,
+            "nombreServicio": "Servicio Test 1781116794228",
+            "descripcion": "Descripcion generada 1781116794228",
+            "duracion": 78,
+            "costo": 54228.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 55,
+            "nombreServicio": "Servicio Test 1781116795078",
+            "descripcion": "Descripcion generada 1781116795078",
+            "duracion": 88,
+            "costo": 55078.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 56,
+            "nombreServicio": "Servicio Test 1781116795822",
+            "descripcion": "Descripcion generada 1781116795822",
+            "duracion": 52,
+            "costo": 55822.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 57,
+            "nombreServicio": "Servicio Test 1781116796565",
+            "descripcion": "Descripcion generada 1781116796565",
+            "duracion": 75,
+            "costo": 56565.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 58,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 59,
+            "nombreServicio": "Servicio Test 1781116801750",
+            "descripcion": "Descripcion generada 1781116801750",
+            "duracion": 40,
+            "costo": 11750.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 60,
+            "nombreServicio": "Corte Moderno 1781116802251",
+            "descripcion": "Descripcion actualizada 1781116802251",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 62,
+            "nombreServicio": "Servicio Test 1781116803232",
+            "descripcion": "Descripcion generada 1781116803232",
+            "duracion": 82,
+            "costo": 13232.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 64,
+            "nombreServicio": "Servicio Test 1781116866786",
+            "descripcion": "Descripcion generada 1781116866786",
+            "duracion": 36,
+            "costo": 26786.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 65,
+            "nombreServicio": "Servicio Test 1781116868310",
+            "descripcion": "Descripcion generada 1781116868310",
+            "duracion": 60,
+            "costo": 28310.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 66,
+            "nombreServicio": "Servicio Test 1781116869332",
+            "descripcion": "Descripcion generada 1781116869332",
+            "duracion": 62,
+            "costo": 29332.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 67,
+            "nombreServicio": "Servicio Test 1781116870450",
+            "descripcion": "Descripcion generada 1781116870450",
+            "duracion": 40,
+            "costo": 30450.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 68,
+            "nombreServicio": "Servicio Test 1781116871448",
+            "descripcion": "Descripcion generada 1781116871448",
+            "duracion": 78,
+            "costo": 31448.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 69,
+            "nombreServicio": "Servicio Test 1781116872449",
+            "descripcion": "Descripcion generada 1781116872449",
+            "duracion": 59,
+            "costo": 32449.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 70,
+            "nombreServicio": "Servicio Test 1781116873389",
+            "descripcion": "Descripcion generada 1781116873389",
+            "duracion": 39,
+            "costo": 33389.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 71,
+            "nombreServicio": "Servicio Test 1781116874151",
+            "descripcion": "Descripcion generada 1781116874151",
+            "duracion": 81,
+            "costo": 34151.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 72,
+            "nombreServicio": "Servicio Test 1781116875274",
+            "descripcion": "Descripcion generada 1781116875274",
+            "duracion": 64,
+            "costo": 35274.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 73,
+            "nombreServicio": "Servicio Test 1781116876455",
+            "descripcion": "Descripcion generada 1781116876455",
+            "duracion": 45,
+            "costo": 36455.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 74,
+            "nombreServicio": "Servicio Test 1781116877443",
+            "descripcion": "Descripcion generada 1781116877443",
+            "duracion": 73,
+            "costo": 37443.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 75,
+            "nombreServicio": "Servicio Test 1781116878308",
+            "descripcion": "Descripcion generada 1781116878308",
+            "duracion": 38,
+            "costo": 38308.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 76,
+            "nombreServicio": "Servicio Test 1781116879213",
+            "descripcion": "Descripcion generada 1781116879213",
+            "duracion": 43,
+            "costo": 39213.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 77,
+            "nombreServicio": "Servicio Test 1781116880239",
+            "descripcion": "Descripcion generada 1781116880239",
+            "duracion": 49,
+            "costo": 40239.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 78,
+            "nombreServicio": "Servicio Test 1781116880956",
+            "descripcion": "Descripcion generada 1781116880956",
+            "duracion": 46,
+            "costo": 40956.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 79,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 80,
+            "nombreServicio": "Servicio Test 1781116887583",
+            "descripcion": "Descripcion generada 1781116887583",
+            "duracion": 73,
+            "costo": 47583.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 81,
+            "nombreServicio": "Corte Moderno 1781116888389",
+            "descripcion": "Descripcion actualizada 1781116888389",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 83,
+            "nombreServicio": "Servicio Test 1781116890040",
+            "descripcion": "Descripcion generada 1781116890040",
+            "duracion": 70,
+            "costo": 50040.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 85,
+            "nombreServicio": "Servicio Test 1781116929272",
+            "descripcion": "Descripcion generada 1781116929272",
+            "duracion": 62,
+            "costo": 39272.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 86,
+            "nombreServicio": "Servicio Test 1781116931415",
+            "descripcion": "Descripcion generada 1781116931415",
+            "duracion": 45,
+            "costo": 41415.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 87,
+            "nombreServicio": "Servicio Test 1781116932581",
+            "descripcion": "Descripcion generada 1781116932581",
+            "duracion": 71,
+            "costo": 42581.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 88,
+            "nombreServicio": "Servicio Test 1781116933886",
+            "descripcion": "Descripcion generada 1781116933886",
+            "duracion": 56,
+            "costo": 43886.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 89,
+            "nombreServicio": "Servicio Test 1781116935139",
+            "descripcion": "Descripcion generada 1781116935139",
+            "duracion": 49,
+            "costo": 45139.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 90,
+            "nombreServicio": "Servicio Test 1781116936104",
+            "descripcion": "Descripcion generada 1781116936104",
+            "duracion": 54,
+            "costo": 46104.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 91,
+            "nombreServicio": "Servicio Test 1781116937014",
+            "descripcion": "Descripcion generada 1781116937014",
+            "duracion": 64,
+            "costo": 47014.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 92,
+            "nombreServicio": "Servicio Test 1781116937935",
+            "descripcion": "Descripcion generada 1781116937935",
+            "duracion": 85,
+            "costo": 47935.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 93,
+            "nombreServicio": "Servicio Test 1781116939182",
+            "descripcion": "Descripcion generada 1781116939182",
+            "duracion": 72,
+            "costo": 49182.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 94,
+            "nombreServicio": "Servicio Test 1781116940317",
+            "descripcion": "Descripcion generada 1781116940317",
+            "duracion": 67,
+            "costo": 50317.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 95,
+            "nombreServicio": "Servicio Test 1781116941451",
+            "descripcion": "Descripcion generada 1781116941451",
+            "duracion": 61,
+            "costo": 51451.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 96,
+            "nombreServicio": "Servicio Test 1781116942436",
+            "descripcion": "Descripcion generada 1781116942436",
+            "duracion": 86,
+            "costo": 52436.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 97,
+            "nombreServicio": "Servicio Test 1781116943293",
+            "descripcion": "Descripcion generada 1781116943293",
+            "duracion": 43,
+            "costo": 53293.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 98,
+            "nombreServicio": "Servicio Test 1781116944448",
+            "descripcion": "Descripcion generada 1781116944448",
+            "duracion": 58,
+            "costo": 54448.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 99,
+            "nombreServicio": "Servicio Test 1781116945728",
+            "descripcion": "Descripcion generada 1781116945728",
+            "duracion": 78,
+            "costo": 55728.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 100,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 101,
+            "nombreServicio": "Servicio Test 1781116952320",
+            "descripcion": "Descripcion generada 1781116952320",
+            "duracion": 70,
+            "costo": 12320.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 102,
+            "nombreServicio": "Corte Moderno 1781116952962",
+            "descripcion": "Descripcion actualizada 1781116952962",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 104,
+            "nombreServicio": "Servicio Test 1781116954132",
+            "descripcion": "Descripcion generada 1781116954132",
+            "duracion": 82,
+            "costo": 14132.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 106,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 107,
+            "nombreServicio": "Servicio Test 1781117276696",
+            "descripcion": "Descripcion generada 1781117276696",
+            "duracion": 86,
+            "costo": 36696.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 108,
+            "nombreServicio": "Corte Moderno 1781117277236",
+            "descripcion": "Descripcion actualizada 1781117277236",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 110,
+            "nombreServicio": "Servicio Test 1781117278224",
+            "descripcion": "Descripcion generada 1781117278224",
+            "duracion": 54,
+            "costo": 38224.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 112,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 113,
+            "nombreServicio": "Servicio Test 1781117312962",
+            "descripcion": "Descripcion generada 1781117312962",
+            "duracion": 52,
+            "costo": 22962.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 114,
+            "nombreServicio": "Corte Moderno 1781117313664",
+            "descripcion": "Descripcion actualizada 1781117313664",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 116,
+            "nombreServicio": "Servicio Test 1781117314889",
+            "descripcion": "Descripcion generada 1781117314889",
+            "duracion": 59,
+            "costo": 24889.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 118,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 119,
+            "nombreServicio": "Servicio Test 1781117368366",
+            "descripcion": "Descripcion generada 1781117368366",
+            "duracion": 76,
+            "costo": 28366.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 120,
+            "nombreServicio": "Corte Moderno 1781117369449",
+            "descripcion": "Descripcion actualizada 1781117369449",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 122,
+            "nombreServicio": "Servicio Test 1781117371655",
+            "descripcion": "Descripcion generada 1781117371655",
+            "duracion": 65,
+            "costo": 31655.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 124,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 125,
+            "nombreServicio": "Servicio Test 1781117414765",
+            "descripcion": "Descripcion generada 1781117414765",
+            "duracion": 35,
+            "costo": 24765.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 126,
+            "nombreServicio": "Corte Moderno 1781117415614",
+            "descripcion": "Descripcion actualizada 1781117415614",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 128,
+            "nombreServicio": "Servicio Test 1781117416716",
+            "descripcion": "Descripcion generada 1781117416716",
+            "duracion": 66,
+            "costo": 26716.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 130,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 131,
+            "nombreServicio": "Servicio Test 1781117462828",
+            "descripcion": "Descripcion generada 1781117462828",
+            "duracion": 38,
+            "costo": 22828.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 132,
+            "nombreServicio": "Corte Moderno 1781117463832",
+            "descripcion": "Descripcion actualizada 1781117463832",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 134,
+            "nombreServicio": "Servicio Test 1781117465321",
+            "descripcion": "Descripcion generada 1781117465321",
+            "duracion": 71,
+            "costo": 25321.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 136,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 137,
+            "nombreServicio": "Servicio Test 1781117499070",
+            "descripcion": "Descripcion generada 1781117499070",
+            "duracion": 40,
+            "costo": 59070.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 138,
+            "nombreServicio": "Corte Moderno 1781117499969",
+            "descripcion": "Descripcion actualizada 1781117499969",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 140,
+            "nombreServicio": "Servicio Test 1781117501214",
+            "descripcion": "Descripcion generada 1781117501214",
+            "duracion": 84,
+            "costo": 11214.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 142,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 143,
+            "nombreServicio": "Servicio Test 1781117722686",
+            "descripcion": "Descripcion generada 1781117722686",
+            "duracion": 36,
+            "costo": 32686.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 144,
+            "nombreServicio": "Corte Moderno 1781117723665",
+            "descripcion": "Descripcion actualizada 1781117723665",
+            "duracion": 40,
+            "costo": 30000.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 146,
+            "nombreServicio": "Servicio Test 1781117725106",
+            "descripcion": "Descripcion generada 1781117725106",
+            "duracion": 56,
+            "costo": 35106.00,
+            "idEstado": 1
+        },
+        {
+            "idServicio": 148,
+            "nombreServicio": "Corte de Cabello",
+            "descripcion": "Corte clasico para caballero",
+            "duracion": 30,
+            "costo": 25000.00,
+            "idEstado": 1
+        }
+    ]
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Servicio Test 1781119016190",
+    "descripcion": "Descripcion generada 1781119016190",
+    "costo": 26190.0,
+    "duracion": 60
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio creado exitosamente",
+    "data": {
+        "idServicio": 149,
+        "nombreServicio": "Servicio Test 1781119016190",
+        "descripcion": "Descripcion generada 1781119016190",
+        "duracion": 60,
+        "costo": 26190.0,
+        "idEstado": 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/149
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:55 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio obtenido",
+    "data": {
+        "idServicio": 149,
+        "nombreServicio": "Servicio Test 1781119016190",
+        "descripcion": "Descripcion generada 1781119016190",
+        "duracion": 60,
+        "costo": 26190.00,
+        "idEstado": 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Servicio Test 1781119016700",
+    "descripcion": "Descripcion generada 1781119016700",
+    "costo": 26700.0,
+    "duracion": 30
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio creado exitosamente",
+    "data": {
+        "idServicio": 150,
+        "nombreServicio": "Servicio Test 1781119016700",
+        "descripcion": "Descripcion generada 1781119016700",
+        "duracion": 30,
+        "costo": 26700.0,
+        "idEstado": 1
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/servicios/actualizar/150
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Corte Moderno 1781119016791",
+    "descripcion": "Descripcion actualizada 1781119016791",
+    "costo": 30000.0,
+    "duracion": 40
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio actualizado exitosamente",
+    "data": {
+        "idServicio": 150,
+        "nombreServicio": "Corte Moderno 1781119016791",
+        "descripcion": "Descripcion actualizada 1781119016791",
+        "duracion": 40,
+        "costo": 30000.0,
+        "idEstado": 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/150
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE2LCJleHAiOjE3ODEyMDU0MTZ9.DJJwuBUXR_cEXnF7DHzFiJ3rl5BV0dXWglGtnvZVpF2U1RRooQwGZtPxR8cwQ2eMJ94F8lAAPrH67ppZHJWOxg
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio obtenido",
+    "data": {
+        "idServicio": 150,
+        "nombreServicio": "Corte Moderno 1781119016791",
+        "descripcion": "Descripcion actualizada 1781119016791",
+        "duracion": 40,
+        "costo": 30000.00,
+        "idEstado": 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Servicio Test 1781119017346",
+    "descripcion": "Descripcion generada 1781119017346",
+    "costo": 27346.0,
+    "duracion": 76
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio creado exitosamente",
+    "data": {
+        "idServicio": 151,
+        "nombreServicio": "Servicio Test 1781119017346",
+        "descripcion": "Descripcion generada 1781119017346",
+        "duracion": 76,
+        "costo": 27346.0,
+        "idEstado": 1
+    }
+}
+Request method:	DELETE
+Request URI:	http://localhost:8080/api/v1/servicios/eliminar/151
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio eliminado exitosamente",
+    "data": null
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/151
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:56 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Servicio no encontrado con id: 151",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "Servicio Test 1781119017886",
+    "descripcion": "Descripcion generada 1781119017886",
+    "costo": 27886.0,
+    "duracion": 76
+}
+HTTP/1.1 201 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio creado exitosamente",
+    "data": {
+        "idServicio": 152,
+        "nombreServicio": "Servicio Test 1781119017886",
+        "descripcion": "Descripcion generada 1781119017886",
+        "duracion": 76,
+        "costo": 27886.0,
+        "idEstado": 1
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/152
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE3LCJleHAiOjE3ODEyMDU0MTd9.E7GYiy_j6_jA09ntSoSWCH-hEErhmU4KreCgRzR7v4tdbNyNDwzjuKtUnTFa6ereijG-2IxehDCjI3_l6c6CXA
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Servicio obtenido",
+    "data": {
+        "idServicio": 152,
+        "nombreServicio": "Servicio Test 1781119017886",
+        "descripcion": "Descripcion generada 1781119017886",
+        "duracion": 76,
+        "costo": 27886.00,
+        "idEstado": 1
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE4LCJleHAiOjE3ODEyMDU0MTh9.qXm-UJPJUXZUs2eu1uQA1DQkddVMNSPn6crjUXkh1i-dCx6xKckLIynLLSBT_3Y0Nl09WToS5F_4tiiFp0gTYQ",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/servicios/crear
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE4LCJleHAiOjE3ODEyMDU0MTh9.qXm-UJPJUXZUs2eu1uQA1DQkddVMNSPn6crjUXkh1i-dCx6xKckLIynLLSBT_3Y0Nl09WToS5F_4tiiFp0gTYQ
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:57 GMT
+Connection: close
+
+{
+    "success": false,
+    "message": "could not execute statement [La columna \"costo\" no permite valores nulos (NULL)\nNULL not allowed for column \"costo\"; SQL statement:\ninsert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default) [23502-214]] [insert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default)]; SQL [insert into tbl_servicios (costo,descripcion,duracion,id_estado,nombre_servicio,id_servicio) values (?,?,?,?,?,default)]; constraint [null]",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	GET
+Request URI:	http://localhost:8080/api/v1/servicios/buscar/999999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 404 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": false,
+    "message": "Servicio no encontrado con id: 999999",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	PUT
+Request URI:	http://localhost:8080/api/v1/servicios/actualizar/999999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "nombreServicio": "N/A",
+    "descripcion": "N/A",
+    "costo": 0.0,
+    "duracion": 0
+}
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Connection: close
+
+{
+    "success": false,
+    "message": "Servicio no encontrado con id: 999999",
+    "data": null
+}
+Request method:	POST
+Request URI:	http://localhost:8080/api/v1/auth/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "email": "admin@barberia.com",
+    "contraseña": "password123"
+}
+HTTP/1.1 200 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Keep-Alive: timeout=60
+Connection: keep-alive
+
+{
+    "success": true,
+    "message": "Login exitoso",
+    "data": {
+        "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w",
+        "type": "Bearer",
+        "usuario": {
+            "numeroDocumento": "123456789",
+            "numeroCelular": "3001234567",
+            "email": "admin@barberia.com",
+            "nombrePersona": "Admin",
+            "idEstado": 1,
+            "idRol": 1,
+            "fechaRegistro": "2026-06-10T13:25:57.770016"
+        }
+    }
+}
+Request method:	DELETE
+Request URI:	http://localhost:8080/api/v1/servicios/eliminar/999999
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBiYXJiZXJpYS5jb20iLCJudW1lcm9Eb2N1bWVudG8iOiIxMjM0NTY3ODkiLCJpZFJvbCI6MSwiaWF0IjoxNzgxMTE5MDE5LCJleHAiOjE3ODEyMDU0MTl9.4wckSSDy5ON_k-F4yar8SVRPjv9uqa7klVQhRSl6rcxdVfI5eCyXZiUsw1c5DxgwGXzrByeEmO1uO1JP2zXF7w
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 400 
+Vary: Origin
+Vary: Access-Control-Request-Method
+Vary: Access-Control-Request-Headers
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 0
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+Pragma: no-cache
+Expires: 0
+X-Frame-Options: DENY
+Content-Type: application/json
+Transfer-Encoding: chunked
+Date: Wed, 10 Jun 2026 19:16:59 GMT
+Connection: close
+
+{
+    "success": false,
+    "message": "Servicio no encontrado con id: 999999",
+    "data": null
+}
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Crear un servicio exitosamente(gestion-de-servicios;crear-un-servicio-exitosamente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Crear un servicio exitosamente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar listado de servicios(gestion-de-servicios;consultar-listado-de-servicios)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar listado de servicios
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar servicio por ID(gestion-de-servicios;consultar-servicio-por-id)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar servicio por ID
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Actualizar un servicio existente(gestion-de-servicios;actualizar-un-servicio-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Actualizar un servicio existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Eliminar un servicio existente(gestion-de-servicios;eliminar-un-servicio-existente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Eliminar un servicio existente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Validar estructura de un servicio(gestion-de-servicios;validar-estructura-de-un-servicio)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Validar estructura de un servicio
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Crear servicio con body vacio(gestion-de-servicios;crear-servicio-con-body-vacio)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Crear servicio con body vacio
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Consultar servicio inexistente(gestion-de-servicios;consultar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Consultar servicio inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Actualizar servicio inexistente(gestion-de-servicios;actualizar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Actualizar servicio inexistente
+----------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Eliminar servicio inexistente(gestion-de-servicios;eliminar-servicio-inexistente)
+--------------------------------------------------------------------------------
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+Eliminar servicio inexistente
+----------------------------------------------------------------------
+]]></system-err>
+</testsuite>
